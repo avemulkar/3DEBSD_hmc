@@ -1,0 +1,61 @@
+%% Import Script for EBSD Data
+%
+% This script was automatically created by the import wizard. You should
+% run the whoole script or parts of it in order to import your data. There
+% is no problem in making any chages to this scrip.
+
+%% Specify Crystal and Specimen Symmetries
+%{
+% path to files
+pname = 'C:\Users\Brian\Documents\3DEBSDrepos\Data\Cleaned Data\nickel_diecompressed\';
+
+% which files to be imported
+fname = {...
+[pname 'scanClean1.txt'], ...
+};
+%}
+
+% path to files
+pname = 'C:\Users\Brian\Documents\3DEBSDrepos\FMSC Boundaries\data for FMSC\aluminum_grains\';
+
+% which files to be imported
+fname = {...
+[pname 'x8t13_y11t15_z5t5.txt'], ...
+
+%}
+%{
+% path to files
+pname = 'C:\Users\Brian\Documents\3DEBSDrepos\FMSC Boundaries\data for FMSC\test_data\';
+
+% which files to be imported
+fname = {...
+[pname 'x0t50_y0t70_z1t1.txt'], ...
+};
+%}
+
+cs = symmetry('m-3m','mineral','fe');      % crystal symmetry
+ss = symmetry('triclinic'); % specimen symmetry
+%{
+file names
+fname = fullfile(mtexDataPath,'EBSD','85_829grad_07_09_06.txt');
+
+load data
+ebsd = loadEBSD(fname,cs,ss,...
+                'interface','generic','Bunge','ignorePhase',[0 2],...
+                 'ColumnNames', { 'Phase' 'x' 'y' 'Euler 1' 'Euler 2' 'Euler 3'},...
+                 'Columns', [2 3 4 5 6 7])
+%}
+ebsd = loadEBSD(fname,cs,ss,...
+                'interface','generic','Bunge','ignorePhase',[0 2],...
+                 'radians','ColumnNames', { 'Euler 1' 'Euler 2' 'Euler 3' 'x' 'y'}  ,...
+                 'Columns', [1 2 3 4 5])             
+          
+             
+figure('position',[100 100 600 300])
+plot(ebsd,'antipodal')
+
+colorbar
+hold on
+plotipdf(ebsd,xvector,'markerSize',3,'points',500,'marker','o','markerfacecolor','none','markeredgecolor','k')
+set(gcf,'renderer','opengl')
+hold off
