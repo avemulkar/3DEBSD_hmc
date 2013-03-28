@@ -1,0 +1,31 @@
+function [newMatrix] =compareMisQuant(quantP, misOP)
+%misOP is a nx3 matrix encoding hex index's and boundaries
+%quantP is a nx2 matrix encoding x, y positions
+[misOPoints, pos] = createAllMisBound(misOP(:,3), misOP(:,2), misOP(:,1));
+
+misMatrix = zeros(1750, 1750);
+quantMatrix = zeros(1750, 1750);
+
+%Place values in quant matrix
+len = length(quantP);
+for i = 1: len
+    row = quantP(i,:);
+    quantMatrix(row(1), row(2)) = 48;
+end
+
+%Place values in misMatrix
+len = length(misOPoints);
+for i = 1 : len
+    misOPoints{i};
+    len2 = length(misOPoints{i});
+    for j = 1 : len2
+        len3 = length(misOPoints{i}{j});
+        for k = 1 : len3
+            row = misOPoints{i}{j}(k,:);
+            misMatrix(row(2), row(1)) = 7;
+        end
+    end
+end
+
+newMatrix = zeros(1750, 1750);
+newMatrix = quantMatrix + misMatrix + 3;

@@ -1,0 +1,38 @@
+function compareMisQuantN(MisOBound, min, max)
+
+Hex = importfile('ipfH1.txt');
+1
+fid = fopen('Comparisons.txt', 'wt'); % Open for writing
+for i = min : max
+    2
+    path = ['Boundaryipf', int2str(i), '.txt'];
+    QuantBound = importfiledata(path);
+    ComparedBound = compareMisQuant(QuantBound, MisOBound);
+    
+    %Count the number of non important points (0), misorientation only
+    %points (20), quantizatino only points (40), and points in agreement (60)
+    Frequency = hist(ComparedBound(:),[153 10 51 58]);
+    fprintf(fid,'%d\t%d\t%d\t%d\n', Frequency);
+    
+    colormap('colorcube')
+    image(ComparedBound);
+    saveas(gcf, ['Comparison', int2str(i), '.fig']);
+    close(gcf);
+    3
+    imageipfEdax(Hex);
+    hold on    
+    imBoundSet(ComparedBound);
+    hold off
+    saveas(gcf, ['ComparisonWithImage', int2str(i), '.fig']);
+    close(gcf);
+    i
+end
+fclose(fid);
+
+%Save the misorientation information incase we want to rerun the program
+fid = fopen('vals.txt', 'wt'); % Open for writing
+for k = 1:length(MisOBound)
+    row = MisOBound(k,:);
+    fprintf(fid,'%d\t%d\t%d\n', row);
+end
+fclose(fid);
