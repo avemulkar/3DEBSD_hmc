@@ -1,0 +1,12 @@
+function ColorMap=colormapping(ObjectMap,numClusters)
+imsize=size(ObjectMap);
+ColorMap=zeros(imsize(1), imsize(2), 3);
+for i=1:imsize(1)
+    for j=1:imsize(2)
+        ColorMap(i,j,1)=(ObjectMap(i,j)/numClusters);
+        ColorMap(i,j,2)=1-(ObjectMap(i,j)/numClusters);
+        ColorMap(i,j,3)=1;
+    end
+end
+
+imshow(hsv2rgb(ColorMap))

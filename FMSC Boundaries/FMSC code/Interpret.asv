@@ -1,0 +1,115 @@
+function [finalmask, elements]=Interpret(AllSals, storage, lengths, mask, z,matrix)
+%Sort all nodes of the pyramid by Saliency
+[~,elements] = sort(AllSals,'ascend');
+size(mask)
+rows=size(mask,1);
+cols=size(mask,2);
+%index contains the pixel location of the base level nodes.
+if z==1
+    slices=size(mask,3);
+    index=zeros(rows*cols*slices,3);
+    size(index)
+    for i=1:rows
+        for j=1:cols
+            for k=1:slices
+                index(((i-1)*cols+j-1)*slices+k,:)=[i;j;k];
+            end
+        end
+    end
+    newmask=zeros(rows,cols,slices,2);
+else
+    index=zeros(rows*cols,2);
+    for i=1:rows
+        for j=1:cols
+            index((i-1)*cols+j,:)=[i;j];
+        end
+    end
+    newmask=zeros(rows,cols,2);
+end
+
+%Ss indicates the s of the node
+Ss=[ones(lengths(1),1)];
+
+%lengthsub indicates the amount each
+%s is offset from the beginning
+lengthsub=[0];
+
+for i=2:length(storage)
+    Ss=[Ss; i*ones(lengths(i),1)];    
+    lengthsub=[lengthsub, lengthsub(i-1)+lengths(i-1)];
+end
+i=1;
+
+g=1;
+[check,newmask]=noisecheck(newmask);
+%Consider each node in order of saliency, from lowest to highest.
+while ~check && i<=length(elements)
+    %if lengths(Ss(elements(i)))>1 && Ss(elements(i))>0
+        n=0;        
+        curele=elements(i);
+        %don't consider nodes with Sal==0
+        if  AllSals(curele)>0 && AllSals(curele)<1
+            curs=Ss(curele);
+            %U is a vector representing the node in question
+            U=zeros(lengths(curs),1);
+            U(curele-lengthsub(curs))=1;
+            %this calculates which data points are in the node
+            for j=curs:-1:2
+                %U(U>.9)=ones(length(find(U>.9)),1);
+                U(U<.1)=zeros(length(find(U<.1)),1);
+                U=storage(j).Ps*U;
+            end
+            maskeles=find(U>.6);
+             if length(maskeles)>150&&curs<length(storage)-4%&& length(newmask(index(maskeles,1), index(maskeles,2),2)>.5)<.5*length(maskeles)
+                %add each data point 
+                for j=1:length(maskeles)
+                    %pn is the point number of a data point that should be
+                    %added to this nodes segment
+                    pn=maskeles(j);
+                    if z==0
+                        if newmask(index(pn,1), index(pn,2),2)<U(pn)&&newmask(index(pn,1), index(pn,2),2)<.6
+                            newmask(index(pn,1), index(pn,2),2)=U(pn);
+                            newmask(index(pn,1), index(pn,2),1)=g;
+                            n=1;
+                        end
+                    else
+                        if newmask(index(pn,1), index(pn,2), index(pn,3) ,2)<U(pn)&&newmask(index(pn,1), index(pn,2), index(pn,3),2)<.1
+                            newmask(index(pn,1), index(pn,2), index(pn,3),2)=U(maskeles(j));
+                            newmask(index(pn,1), index(pn,2), index(pn,3),1)=g;
+                            n=1;
+                        end
+                    end
+                end
+           end
+            % end
+    %        end
+            if n==1
+                if z==0
+                    curs;
+                    curele;
+                    %colormapping(newmask(:,:,1));
+                    %mapedges(matrix,newmask(:,:,1), rows, cols, 0,0);
+                    g=g+1;
+                    AllSals(elements(i))
+                    curs
+                    [check,newmask]=noisecheck(newmask);
+                    close all
+                    colormapping(newmask(:,:,1));
+                    figure
+                    mapedges(matrix, newmask(:,:,1), rows, cols, 30,30);
+                end
+            end
+        end
+    %end
+    i=i+1;
+end
+i
+if z==0
+   
+    finalmask=newmask(:,:,1);
+    newmask(:,:,1)=nosieremove(newmask(:,:,1));
+    %colormapping(newmask(:,:,1)); 
+    mapedges(matrix, newmask(:,:,1), rows, cols, 30,30);
+else
+    finalmask=newmask(:,:,:,1);
+end

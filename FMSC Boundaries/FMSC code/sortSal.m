@@ -1,0 +1,45 @@
+function finalmask=sortSal(AllSals, storage, lengths, mask, Urel, Ucover)
+[~,elements] = sort(AllSals,'ascend');
+Ss=[ones(lengths(1),1)];
+lengthsub=[0];
+rows=size(mask,1);
+cols=size(mask,2);
+index=zeros(rows*cols,2);
+for i=1:rows
+    for j=1:cols
+        index((i-1)*cols+j,:)=[i;j];
+    end
+end
+for i=2:length(storage)-4
+    Ss=[Ss; (i+4)*ones(lengths(i),1)];    
+    lengthsub=[lengthsub, lengthsub(i-1)+lengths(i-1)];
+end
+i=1;
+newmask=zeros(rows,cols,2);
+g=1;
+while nnz(newmask(:,:,1))<rows*cols
+    i;
+    n=0;
+    curele=elements(i);
+    if AllSals(elements(i))>0
+        curs=Ss(curele);
+        Uscur=storage(curs).Us;
+        curele-lengthsub(curs)
+        U=Uscur(:,curele-lengthsub(curs));
+        maskeles=find(Urel(:,elements(i)));
+        for j=1:length(maskeles)
+            if newmask(index(maskeles(j),1), index(maskeles(j),2))<Urel(maskeles(j),elements(i))
+                newmask(index(maskeles(j),1), index(maskeles(j),2))=Urel(maskeles(j),elements(i));
+                newmask(index(maskeles(j),1), index(maskeles(j),2))=g;
+                n=1;
+            end
+        end
+        if n==1
+            g=g+1;
+            AllSals(Ucover(:,elements(i))>0)=zeros(Ucover(:,elements(i))>0,1);
+        end
+        i=i+1;
+    end
+end
+colormapping(newmask(:,:,1));
+finalmask=newmask(:,:,1);

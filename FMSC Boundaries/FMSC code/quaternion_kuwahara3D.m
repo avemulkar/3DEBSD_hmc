@@ -1,0 +1,91 @@
+function [filtered,original] = quaternion_kuwahara3D(M, passes,headerlines)    
+%Input-- path: text file of raw ebsd data, assumed to be in degrees
+%        writetofile: 1 if you wish to create the text file Z
+%        passes: number of passes through Kuwahara filter
+%Output-- filtered: filtered quaternion data q(i,j,k,real)
+%         original: quaternion data q(i,j,k,real)
+%quaterion_kuwahara converts from euler angles to quaterions in order to
+%perform the kuwahara filter. After the filter has been applied, the data
+%is written into the text file Z
+%% Data Input
+%     %Reads from a raw EBSD data set "path" (ie: 'slice 1.txt')
+%    path = 'slice 6.txt';
+%     [phi1,PHI,phi2,xpos,ypos,IQ,CI,Fit,GrainID,edge,phasename1,phasename2] = ...
+%         textread(path,'%f %f %f %f %f %f %f %f %f %f %s %s ]','headerlines',10);    
+%     [M] = [phi1 PHI phi2 xpos ypos CI Fit GrainID edge [phasename1,phasename2]];
+%Z = [path(1:(end-4)),'_filtered.txt'];
+
+%IQ,CI,Fit,GrainID,edge                f%f%f%f%f%
+%[xpos,ypos,phi1,PHI,phi2] = textread(path,'%f%f%f%f%f%*[^\n]','headerlines',headerlines);    
+%[phi1,PHI,phi2,xpos,ypos] = textread(path,'%f%f%f%f%f%*[^\n]','headerlines',headerlines);
+phi1 =M(:,1);
+PHI=M(:,2);
+phi2=M(:,3);
+xpos=M(:,4);
+ypos=M(:,5);
+zpos=M(:,6);
+[Cx,I] = max(xpos);
+[Cy] = max(ypos);
+[Cz] = max(zpos);
+stepsize = xpos(I)-xpos(I-1);
+
+%% Prepare a Matrix for kuwahara filter
+X = zeros(round(Cy/stepsize)+1,round(Cx/stepsize)+1,Cz, 3);
+for i = 1:(length(M(:,1)))
+         y = 1+M(i,5)/stepsize;%this is the y index in the row
+         x = 1+M(i,4)/stepsize;%this is the x index in the row
+         X(round(y),round(x), M(i,6),:) = [M(i,1),M(i,2),M(i,3)];
+        
+end%for
+
+%% Convert to Quaternion
+
+Q = zeros(round(Cy/stepsize)+1,round(Cx/stepsize+1), Cz,4);
+for j = 1:(length(X(:,1,1,1))) %for y position
+    for i = 1:(length(X(j,:,1,1))) %for x position 
+        for k = 1:(length(X(j,i,:,1)))
+        alpha = X(j,i,k,1);
+        beta = X(j,i,k,2);
+        gamma = X(j,i,k,3);
+%         if heading == 0 && attitude == 0 && bank == 0
+%             Q(j,i,:) = [0 0 0 0];
+%         else
+            %Q(j,i,:)=SpinCalc('EA313toQ',[heading attitude bank]*(180/pi),eps,1);
+            
+            b = -cos((alpha-gamma)./2) .* sin(beta./2);
+            c = sin((alpha-gamma)./2) .* sin(beta./2);
+            d = -sin((alpha+gamma)./2) .* cos(beta./2);
+            a = cos((alpha+gamma)./2) .* cos(beta./2);
+            %q = euler2quat(heading,attitude,bank,'bunge')
+            Q(j,i,k,:) = [a,b,c,d]/norm([a,b,c,d]);
+        %end
+    end%for
+end%for
+%% Apply Kuwahara filter
+checkpasses = 0;
+if (passes < 1) 
+    checkpasses = 1;
+end
+original = Q;
+if checkpasses ~= 1
+    for p = 1:passes
+        p+' passes left'
+        filtered = augkuw(Q);
+        Q=filtered;
+    end
+else
+    filtered = original;
+end
+    
+           
+
+
+%% Convert Back to Euler Angles
+% Y = zeros(round(Cy/stepsize)+1,round(Cx/stepsize)+1,3);
+% for j = 1:(length(filtered(:,1,1)));
+%     for i = 1:(length(filtered(1,:,1)));
+%         Y(j,i,:)=SpinCalc('QtoEA313',reshape(filtered(j,i,:),1,4),eps,1);
+%     end
+% end
+end
+

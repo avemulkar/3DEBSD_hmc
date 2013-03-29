@@ -1,0 +1,8 @@
+function pointseg(AllSals, Ucover, x, y, rows, cols, Urel)
+
+poss=find(Ucover((x-1)*rows+y+1,:)>.5);
+[I, M]=max(AllSals(poss));
+nextmask=zeros(rows,cols);
+for i=1:rows
+    for j=1:cols
+        nextmask(i,j)=Urel((i-1)*rows+j     

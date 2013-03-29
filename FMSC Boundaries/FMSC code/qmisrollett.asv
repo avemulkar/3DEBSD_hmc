@@ -1,0 +1,38 @@
+function [qmis,I] = qmisrollett(qA,qB)
+%Input: qA, qB - Quaternions vectors
+% assumes quaternion form [i j k real]
+% errors may occur when qA and qB are not normed.
+%Output: qmis - Minimum misorientation angle between quaternions (radians)
+% Reference:  Rollett presentation "Misorientation & Symmetry" 27-765, 2001
+% references Sutton and Balluffi
+I = [0 0 0 1];
+% Rotate qA by qB (or B by A???)
+%qA=[qA(4), qA(1), qA(2), qA(3)];
+%qB=[qB(4), qB(1), qB(2), qB(3)];
+
+
+qB(4) = -1*qB(4);
+
+
+qc(1) = qA(1)*qB(4) + qA(4)*qB(1) - qA(2)*qB(3) + qA(3)*qB(2); 
+qc(2) = qA(2)*qB(4) + qA(4)*qB(2) - qA(3)*qB(1) + qA(1)*qB(3); 
+qc(3) = qA(3)*qB(4) + qA(4)*qB(3) - qA(1)*qB(2) + qA(2)*qB(1); 
+qc(4) = qA(4)*qB(4) - qA(1)*qB(1) - qA(2)*qB(2) - qA(3)*qB(3); 
+
+
+
+qc = sort(abs(qc));
+
+[C,I] = max([qc(4), (qc(3)+qc(4))/sqrt(2), sum(qc)/2]);
+I
+qmis = abs(2*acosd(C));
+
+
+%code for using the mtex matlab set
+% cs = symmetry('m-3m');ss = symmetry('triclinic');
+% qA=quaternion(qA(4),qA(1),qA(2),qA(3));
+% qB=quaternion(qB(4),qB(1),qB(2),qB(3));
+% qA = qA/norm(qA);
+% qB = qB/norm(qB);
+% qmis = dist(cs,ss,qA,qB);
+end

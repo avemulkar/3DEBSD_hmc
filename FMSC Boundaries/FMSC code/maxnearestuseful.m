@@ -1,0 +1,17 @@
+function outputimage=maxnearestuseful(image, Q, theta)
+[rows,cols,z]=size(image);
+outputimage=zeros(rows,cols,2);
+for i=2:rows-1
+    for j=2:cols-1
+        [~, del, ~]=qmisbrutev2(Q(i,j,:), Q(i-1,j,:));
+        [~, del2, ~]=qmisbrutev2(Q(i,j,:), Q(i+1,j,:));
+        [~, del3, ~]=qmisbrutev2(Q(i,j,:), Q(i,j-1,:));
+        [~, del4, ~]=qmisbrutev2(Q(i,j,:), Q(i,j+1,:));
+           outputimage(i,j,1)=median([del, del2, del3, del4]);
+%            outputimage(i,j,2)=max([qmisbrute(Q(i,j,:), Q(i-1,j,:)),...
+%            qmisbrute(Q(i,j,:), Q(i+1,j,:)), ...
+%            qmisbrute(Q(i,j,:), Q(i,j-1,:)),...
+%            qmisbrute(Q(i,j,:), Q(i,j+1,:))]);
+    end
+end
+imshow(image(:,:,1)/max(max(image(:,:,1))))

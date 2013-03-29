@@ -1,0 +1,4 @@
+function iorder=sortdensities(W,storage)
+Us=storage(length(storage)).Us;  
+[~,iorder] = sort(sumW, 'ascend');
+    

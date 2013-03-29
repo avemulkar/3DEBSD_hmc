@@ -1,0 +1,27 @@
+function newSparse = sparseConcat(oldSparse,newRows,newCols,newVals,newSize)
+[Si Sj Sv] = find(oldSparse);
+
+%if oldSparse empty, newSparse = newValues
+if isempty(oldSparse)
+    newSparse = sparse(newRows,newCols,newVals,... 
+                       newSize(1),newSize(2));
+
+%if newValues empty, newSparse = oldSparse
+elseif isempty(newVals)
+    newSparse = oldSparse;
+
+%esle
+else
+    idx = ismember([Si Sj],[newRows newCols],'rows');
+    idx = ~idx;
+    length(newRows)
+    length(newCols)
+    length(newVals)
+    newSparse = sparse([Si(idx);newRows],...
+                       [Sj(idx);newCols],...
+                       [Sv(idx);newVals],...
+                       newSize(1),newSize(2));
+end
+     
+clear Si; clear Sj; clear Sv;
+clear idx;

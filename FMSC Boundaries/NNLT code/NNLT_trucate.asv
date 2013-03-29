@@ -1,0 +1,41 @@
+function transfM = NNLT_trucate(transfM,xRange,yRange,plotYN)
+
+minX = xRange(1); maxX = xRange(2);
+minY = yRange(1); maxY = yRange(2);
+
+%% plot data and check that its OK
+%returns - which has a minimum confidence level
+if nargin == 
+transf2plot = transfM(transfM(:,6)>confidence,:);
+figure(1)
+subplot(2,1,1),plot(transf2plot(:,4),transf2plot(:,5),'.b','markersize',2)
+titlestring = strcat('specified x range and y range of slice',...
+    num2str(slice)); title(titlestring);
+ylabel('Height (microns)');
+axis([minX-2 maxX+2 minY-2 maxY+2])
+line([minX maxX; minX maxX; minX minX; maxX maxX],...
+     [minY minY; maxY maxY; minY maxY; minY maxY],...
+     'linestyle','--','color','r')
+
+%% delete all points in TransfM that are outside the real dimensions
+%i.e. get rid of all extraneous points, to get lessen size of data set
+%returns - transfMstruct(sliceIndex)
+transfM(transfM(:,4)<minX,:)=[]; %delete x<minX
+transfM(transfM(:,4)>maxX,:)=[]; %delete x>maxX
+transfM(transfM(:,5)<minY,:)=[]; %delete y<minY
+transfM(transfM(:,5)>maxY,:)=[]; %delete y>maxY
+[lengthTransfM widthTransfM] = size(transfM);
+
+lengthSlices(sliceIndex) = lengthTransfM;
+%save truncated data to structure
+transfMstruct{sliceIndex} = transfM;
+
+%% plot data again and check that its still OK
+%returns - which has a maximum confidence level
+conf = .1; %maximum confidence level
+transf2plot = transfM(transfM(:,6)<conf,:);
+figure(1)
+subplot(2,1,2),plot(transf2plot(:,4),transf2plot(:,5),'.b','markersize',2)
+xlabel('Width (microns)'); ylabel('Height (microns)');
+axis([xRange yRange])
+pause(.1)

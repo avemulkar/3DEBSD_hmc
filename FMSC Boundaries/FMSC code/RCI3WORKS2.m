@@ -1,0 +1,104 @@
+Avesin=Aves(:,1:6);
+Qin=Q(:,1:6,1:6);
+Wnext=Wnew;
+Sigin=Sig;
+% [r,c]=find(Wnext);
+% W=[];
+% mask=zeros(rows, cols);
+% L=laplaceW(Wnext);
+% Lin=L;
+% links=sparse(rows*cols,rows*cols);
+% v=ones(length(Wnext),1);
+% [r, c]=find(Wnext);
+% for i=1:length(r)
+%     links(r(i),c(i))=1;
+% end
+% Sal=zeros(length(Wnext),1);
+% for i=1:length(Wnext)
+%     Sal(i)=L(i,i)/Wnext(i,i);
+% end
+% Urel=[speye(length(Wnext))];
+% storage=[struct('Sals', Sal, 'Us', speye(length(Wnext)),'Ps', speye(length(Wnext)), 'Vs', v, 'Ws', Wnext, 'Qin',Qin)];
+% AllSals=[Sal];
+% lengths=[length(Wnext)];
+% for i=1:4
+%     i
+%     W=Wnext;
+%     [Wnext, Uout, L, Sal, v, P, Urel,Qin, links, Avesin,Sigin]=CGI3new(W, .2, links, v, i, Qin, Urel,storage,Q,L, Avesin, Sigin);
+%     storage=[storage, struct('Sals', Sal, 'Us', Uout,'Ps', P, 'Vs', v, 'Ws', Wnext,'Qin',Qin)];
+%     AllSals=[AllSals;Sal];
+%     lengths=[lengths, length(Sal)];
+% end
+% 'Wmod'
+% Us=storage(5).Us;
+% Wmod=storage(1).Ws;
+% Wmult=sparse(rows*cols,rows*cols);
+% origsum=sum(Wmod);
+% origDiag=diag(Wmod);
+% for i=1:size(Us,2)
+%     U=Us(:,i);
+%     Qintop=Avesin(i,1:4);
+%     elements=find(U>.5);
+%     Svar=0;
+%     for j=1:length(elements)
+%         Svar=Svar+U(elements(j))*(Sigin(i)-Sig(elements(j)))^2;
+%     end
+%     Svar=Svar/sum(U(elements));
+%     elements=find(U);
+%     [r,c]=find(Wmod(elements,:));
+%     for j=1:length(r)
+%        if abs(Sigin(i)-Sigin(r(j)))>sqrt(Svar)
+%            Wmod(elements(r(j)),c(j))=Wmod(elements(r(j)),c(j))*exp(-abs(Sigin(i)-Sigin(r(j)))/sqrt(Svar));
+%        end
+%     end
+% end
+% 
+% Avesin=Aves;
+% Qin=Q;
+% Wnext=Wmod;
+% Sigin=Sig;
+
+[r,c]=find(Wnext);
+W=[];
+rows*cols
+links=sparse(rows*cols*slices, rows*cols*slices);
+size(links)
+mask=zeros(rows, cols,slices);
+s=1
+L=laplaceW(Wnext);
+Lin=L;
+v=ones(length(Wnext),1);
+TM=zeros(length(Wnext),1);
+for i=1:length(Wnext)
+    TM(i)=sum(Wnext(i,:))/nnz(Wnext(i,:));
+end
+[r, c]=find(Wnext);
+C=sparse(size(Wnext));
+size(links)
+for i=1:length(r)
+    C(r(i),c(i))=1;
+    links(r(i),c(i))=1;
+end
+size(links)
+Sal=zeros(length(Wnext),1);
+for i=1:length(Wnext)
+    Sal(i)=L(i,i)/Wnext(i,i);
+end
+Urel=[speye(length(Wnext))];
+Ucover=Urel;
+storage=[struct('Sals', Sal, 'Us', speye(length(Wnext)),'Ps', speye(length(Wnext)), 'Vs', v, 'Ws', Wnext, 'Qin',Qin, 'Var', zeros(length(W),1), 'Aves', Aves(:,1:4))];
+AllSals=[Sal];
+lengths=[length(Wnext)];
+Varin=zeros(length(Wnext),1);
+
+while ~isequal(size(Wnext),size(W))
+     W=Wnext;
+     [Wnext, Uout, L, Sal, v, P, Urel,Qin,links,Avesin,Sigin,Varin,Ucover]=CGI3new2(W, .15, links, v, s, Qin, Urel,storage, Aves(:,1:4), L,Avesin,Sigin,Ucover, Varin);
+     storage=[storage, struct('Sals', Sal, 'Us', Uout,'Ps', P, 'Vs', v, 'Ws', Wnext,'Qin',Qin, 'Var', Varin, 'Aves', Avesin)];
+     AllSals=[AllSals;Sal];
+     lengths=[lengths, length(Sal)];
+     %pointseg(AllSals, Ucover, 30,80, 100, 100, Urel);
+     s=s+1  
+end
+%nextmask=interpret(AllSals, storage, lengths, mask,0,matrix);
+%mapedges(matrix, nextmask, 71,101,50,28)

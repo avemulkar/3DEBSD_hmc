@@ -1,0 +1,53 @@
+function Sig=Siggen(Q)
+%Set run parameters
+%windowsize must be odd
+windowsize=7;
+hws=floor(windowsize/2);
+percentile=.7;
+
+imsize=size(Q);
+z=0;
+if length(imsize)>3
+    z=1;
+    Sig=zeros(imsize(1), imsize(2), imsize(3));
+else
+    Sig=zeros(imsize(1), imsize(2));
+end
+for i=1:imsize(1)
+    for j=1:imsize(2)
+        if z==0
+            qA1=Q(i,j,1);
+            qA2=Q(i,j,2);
+            qA3=Q(i,j,3);
+            qA4=Q(i,j,4);
+            qA=[qA1, qA2, qA3, qA4];
+            list=[];
+            %Scan through the window
+            for k=max(i-hws,1):min(i+hws,imsize(1))
+                for l=max(j-hws,1):min(j+hws,imsize(2))
+                   list=[list,qmisrollett(qA,[Q(k,l,1),Q(k,l,2),Q(k,l,3),Q(k,l,4)])];
+                end
+            end
+            list=sort(list);
+            Sig(i,j)=list(floor(percentile*(min(i+hws,imsize(1))-max(i-hws,1))*(min(j+hws,imsize(2))-max(j-hws,1))));
+        else
+            for k=1:imsize(3)
+                qA1=Q(i,j,k,1);
+                qA2=Q(i,j,k,2);
+                qA3=Q(i,j,k,3);
+                qA4=Q(i,j,k,4);
+                qA=[qA1, qA2, qA3, qA4];
+                list=[];
+                for l=max(i-hws,1):min(i+hws,imsize(1))
+                    for m=max(j-hws,1):min(j+hws,imsize(2))
+                        for n=max(k-hws,1):min(k+hws,imsize(3))
+                            list=[list,qmisrollett(qA,[Q(l,m,n,1),Q(l,m,n,2),Q(l,m,n,3),Q(l,m,n,4)])];
+                        end
+                    end
+                end
+                list=sort(list);
+                Sig(i,j,k)=list(floor(percentile*(min(i+hws,imsize(1))-max(i-hws,1))*(min(j+hws,imsize(2))-max(j-3,1))*(min(k+hws,imsize(3))-max(k-3,1))));
+            end
+        end
+    end
+end

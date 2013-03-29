@@ -1,0 +1,142 @@
+% NNLT - nearest neighbor lookup table
+% creates a cell array that functions as a lookup table 
+% to find the nearest%neighbors 
+% returns - transfM 
+%         - Nx6 matrix where N is the # of points within realWidth & realHeight)
+% returns - transfMLT 
+%         - Nx1 cell array, each entry is the index of of the nearest neighbors 
+%function [transfM, transfMLT]=getNNlist( folder, range )
+function [transfM, transfMLT]=getNNlist( transfM, range )
+
+%radius = .2;
+%realWidth = 35 %assumes {0 < x < realWidth}
+%realHeight = 19 %assumes {0 < y < realHeight}
+
+%% Path to read from
+%returns - path
+% transfM=[];
+% for i=range(3,1):range(3,2)
+% 
+% 
+% 
+%     %folder = 'C:\Users\brian\Documents\research\align transformed data\Transformed data';
+%     path = strcat(folder,'\','ScanTrans', int2str(i), '.txt');
+% 
+%     %% Import that data from path (transformed data)
+%     %returns - transfM
+%     temptransfM = dlmread(path);
+%     temptransfM = [temptransfM(:,[1:5 7]), i];
+%     %Columns 1-3 are Euler angles
+%     %Columns 4-5 are the x and y positions
+%     %Column 7 is the confidence index
+% 
+%     %% plot data and check that its OK
+%     %returns - which has a miniumum confidence level
+%     conf = .1; %minumum confidence level
+%     transf2plot = temptransfM(temptransfM(:,6)<conf,:);
+%     figure(1)
+%     plot(transf2plot(:,4),transf2plot(:,5),'b.')
+%     title('specified real width and real height of slice')
+%     xlabel('Width (microns)'); ylabel('Height (microns)');
+%     Vaxis = axis;
+%     line([Vaxis(1) Vaxis(2)]', [range(1,1:2);range(1,1:2)],'color','r');
+%     line([range(2,1:2);range(2,1:2)], [Vaxis(3) Vaxis(4)],'color','r');
+% 
+%     %% determine the width and height of each slab the hard way
+%     %assumes that the width of the slice is alteast 10 microns
+%     %returns - width, height
+%     [lengthTransfM widthTransfM] = size(temptransfM);
+% 
+%     index = 1;
+%     endreached =0;
+%     while endreached == 0;
+%         %if there is a jump of >10 (arbitary) in x coordinate in the coord list
+%         endreached = abs(abs(temptransfM(index+1,4))-abs(temptransfM(index,4)))>10;
+%         index = index+1;
+%     end
+%     width = index-1
+%     height = ceil(lengthTransfM/width)
+%     step = .1;
+% 
+%     %% delete all points in TransfM that are outside the real dimensions
+%     %i.e. get rid of all extraneous points, to get lessen size of data set
+% 
+%     temptransfM(temptransfM(:,4)<range(1,1),:)=[]; %delete x<0
+%     temptransfM(temptransfM(:,4)>range(1,2),:)=[]; %delete x>realWidth
+%     temptransfM(temptransfM(:,5)<range(2,1),:)=[]; %delete y<0
+%     temptransfM(temptransfM(:,5)>range(2,2),:)=[]; %delete y>realHeight
+%     [lengthTransfM widthTransfM] = size(temptransfM)
+% 
+%     %% plot data again and check that its still OK
+%     %returns - which has a miniumum confidence level
+%     conf = .1; %minumum confidence level
+%     transf2plot = temptransfM(temptransfM(:,6)<conf,:);
+%     figure(2)
+%     plot(transf2plot(:,4),transf2plot(:,5),'b.')
+%     title('specified real width and real height of slice')
+%     xlabel('Width (microns)'); ylabel('Height (microns)');
+%     transFM=[transFM, temptransFM];
+% end
+%% find the points nearest to each grid point
+%store transfM index of point in cell array
+%whose entries correspond to each grid point
+%returns - transfMgrid
+lengthTransfM=length(transfM);
+nearCoord = [round(10*transfM(:,[4 5])), transfM(:,7)];
+realWidth = -(range(1,1)-range(1,2))+1; %change to index
+realHeight = -(range(2,1)-range(2,2))+1; %change to index
+realZ = range(3,2)-range(3,1)+1;
+transfMgrid = cell(realHeight+1,realWidth+1, realZ+1); %allocate memory
+for point = 1:lengthTransfM
+    %get index of nearest discrete grid point
+    xGridIndex = nearCoord(point,1)+1-range(1,1);
+    yGridIndex = nearCoord(point,2)+1-range(2,1);
+    zGridIndex = nearCoord(point,3)-range(3,1)+1;
+    %add index of point to the cell with that index
+    [yGridIndex,xGridIndex, zGridIndex]
+    transfMgrid{yGridIndex,xGridIndex, zGridIndex}=...
+        [transfMgrid{yGridIndex,xGridIndex, zGridIndex} point];
+end
+
+%% find nearest neighbors
+% returns - transfMLT
+transfMLT = cell(lengthTransfM,1);
+for point = 1:lengthTransfM
+    %get index coordinates
+    xGridIndex = nearCoord(point,1)+1-range(1,1)
+    yGridIndex = nearCoord(point,2)+1-range(2,1)
+    zGridIndex = nearCoord(point,3)-range(3,1)+1
+    %get index of all grid points within a [2*radius X 2*radius box]
+    %around that discrete grid point point (NN indices)
+    xBoxIndices = max(1,xGridIndex-1):min(realWidth,xGridIndex+1)
+    yBoxIndices = max(1,yGridIndex-1):min(realHeight,yGridIndex+1)
+    zBoxIndices = max(1,zGridIndex-1):min(realZ,zGridIndex+1)   
+    %for each of these grid points within the box
+    for xIndexNN = xBoxIndices %x index of nearest neigbor
+        for yIndexNN = yBoxIndices %yindex of nearest neighbor
+            for zIndexNN=zBoxIndices
+                if (xIndexNN-xGridIndex)^2+(yIndexNN-yGridIndex)^2+(zIndexNN-zGridIndex)^2<1.1^2
+                    for CellPoint=transfMgrid{yIndexNN,xIndexNN, zIndexNN} %List Index of guess
+                    %if the data point is within the radius of the real point
+                        if CellPoint~=point;
+                        %then add the index of that point to the cell
+                        transfMLT{point} = [transfMLT{point} CellPoint];
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+    
+%% write to tab deliminated file
+%{
+folder = 'Transformed Coordinate data';
+mkdir(folder)
+pathWrite = [folder,'\\','ScanTransCoord', int2str(i), '.txt'];
+dlmwrite(pathWrite, transfCoordM, 'delimiter','\t',...
+    'newline','pc','precision','%f')
+%}
+ 
+
+
