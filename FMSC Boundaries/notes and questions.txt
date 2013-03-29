@@ -1,0 +1,28 @@
+make local scaling factors
+initialize sig using quaternions now replaced with sig = ones.
+what was sig originally?
+
+why should setup initialize all diagonal elements to 0?
+
+why are the diagonal elements of W not always 0?
+
+W is symmetric and positive?
+
+zero entry in W means no connection, but diagonals should have zero misorientation
+
+in coarsenW_fast, connections with a weight less than some fraction
+of the average weight of that node are assigned to zero
+why not below some stdev?
+
+if cmaha0 is small, then exp(-cmaha0*del) is approximately a linear function
+so W will have the same distribtution as del
+
+when creating the coarse seeds, why sort by size? why not by values of W of saliency,
+especially for the first iteration when the size of all nodes is zero.
+
+sum the rows, sort by descending (greatest weights) for s=1
+for later s, sort by saliency
+
+color points for each plot of s by the ipf color of the mean euler of the cluster its assigned to
+
+make the seeds a different marker type
