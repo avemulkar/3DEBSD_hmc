@@ -1,0 +1,2203 @@
+
+ans =
+
+aluminum_grains\x6.5t47_y0.5t18_z5t5
+
+
+ans =
+
+cmaha0:     0.05
+cmaha:        1
+quatmax:      5
+gammaW:       25
+
+
+
+ans =
+
+starting setup 3D
+
+Elapsed time is 0.000003 seconds.
+Elapsed time is 5.684204 seconds.
+
+ans = 
+
+    'Wnext'    [2952]    [2952]    [22912]
+    'Aves'     [2952]    [   7]    [20658]
+
+
+ans =
+
+starting RunFMC
+
+Elapsed time is 5.687247 seconds.
+
+ans =
+
+links
+
+Elapsed time is 5.691403 seconds.
+Elapsed time is 5.692639 seconds.
+
+s =
+
+     1
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [22912]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [22912]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 5.984578 seconds.
+
+ans =
+
+beginning sorting by weights
+
+Elapsed time is 6.804002 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size Celements'    [1x2 double]    [ 1302]
+    'size F'            [1x2 double]    [ 1650]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 6.805258 seconds.
+Elapsed time is 6.832951 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size P'            [1x2 double]    [ 8084]
+    'size Celements'    [1x2 double]    [ 1302]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 6.834377 seconds.
+Elapsed time is 6.870135 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size P'            [1x2 double]    [ 8084]
+    'size Celements'    [1x2 double]    [ 1302]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 6.871514 seconds.
+Elapsed time is 8.688012 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [24302]
+    'size P'          [1x2 double]    [ 7562]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 8.691070 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [21738]
+    'size P'          [1x2 double]    [ 7562]
+
+Elapsed time is 11.549936 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 11.558686 seconds.
+Elapsed time is 11.628153 seconds.
+
+ans = 
+
+    'Wnext'    [1302]    [1302]    [21738]
+    'Sal'      [1302]    [   1]    [ 1301]
+    'v'        [1302]    [   1]    [ 1302]
+    'P'        [2952]    [1302]    [ 7562]
+    'links'    [1302]    [1302]    [24302]
+    'Aves'     [1302]    [   7]    [ 9111]
+    'Varin'    [1302]    [   1]    [ 1301]
+
+
+s =
+
+     2
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [21738]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [15980]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 11.968030 seconds.
+Elapsed time is 12.156804 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [15980]
+    'size Celements'    [1x2 double]    [  589]
+    'size F'            [1x2 double]    [  713]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 12.158563 seconds.
+Elapsed time is 12.192260 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [15980]
+    'size P'            [1x2 double]    [ 4515]
+    'size Celements'    [1x2 double]    [  589]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 12.193007 seconds.
+Elapsed time is 12.214859 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [15980]
+    'size P'            [1x2 double]    [ 4516]
+    'size Celements'    [1x2 double]    [  590]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 12.215430 seconds.
+Elapsed time is 12.963308 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [12634]
+    'size P'          [1x2 double]    [ 4516]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 12.973808 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [12634]
+    'size P'          [1x2 double]    [ 4516]
+
+Elapsed time is 14.612436 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 14.613016 seconds.
+Elapsed time is 14.642047 seconds.
+
+ans = 
+
+    'Wnext'    [ 590]    [590]    [12634]
+    'Sal'      [ 590]    [  1]    [  585]
+    'v'        [ 590]    [  1]    [  590]
+    'P'        [1302]    [590]    [ 4516]
+    'links'    [ 590]    [590]    [19982]
+    'Aves'     [ 590]    [  7]    [ 4127]
+    'Varin'    [ 590]    [  1]    [  589]
+
+
+s =
+
+     3
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [12634]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [5940]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 14.880733 seconds.
+Elapsed time is 15.054420 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [5940]
+    'size Celements'    [1x2 double]    [ 245]
+    'size F'            [1x2 double]    [ 345]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 15.064818 seconds.
+Elapsed time is 15.084038 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [5940]
+    'size P'            [1x2 double]    [1682]
+    'size Celements'    [1x2 double]    [ 245]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 15.084346 seconds.
+Elapsed time is 15.105783 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [5940]
+    'size P'            [1x2 double]    [1687]
+    'size Celements'    [1x2 double]    [ 250]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 15.106978 seconds.
+Elapsed time is 15.480808 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [3732]
+    'size P'          [1x2 double]    [1687]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 15.481748 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [3732]
+    'size P'          [1x2 double]    [1687]
+
+Elapsed time is 16.048217 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 16.052436 seconds.
+Elapsed time is 16.069624 seconds.
+
+ans = 
+
+    'Wnext'    [250]    [250]    [3732]
+    'Sal'      [250]    [  1]    [ 240]
+    'v'        [250]    [  1]    [ 250]
+    'P'        [590]    [250]    [1687]
+    'links'    [250]    [250]    [8698]
+    'Aves'     [250]    [  7]    [1747]
+    'Varin'    [250]    [  1]    [ 249]
+
+
+s =
+
+     4
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [3732]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [1810]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 16.154293 seconds.
+Elapsed time is 16.170856 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [1810]
+    'size Celements'    [1x2 double]    [ 113]
+    'size F'            [1x2 double]    [ 137]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 16.173152 seconds.
+Elapsed time is 16.183645 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [1810]
+    'size P'            [1x2 double]    [ 538]
+    'size Celements'    [1x2 double]    [ 113]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 16.184551 seconds.
+Elapsed time is 16.195096 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [1810]
+    'size P'            [1x2 double]    [ 547]
+    'size Celements'    [1x2 double]    [ 122]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 16.195627 seconds.
+Elapsed time is 16.331121 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [960]
+    'size P'          [1x2 double]    [546]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 16.331965 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [960]
+    'size P'          [1x2 double]    [546]
+
+Elapsed time is 16.463325 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 16.463382 seconds.
+Elapsed time is 16.473014 seconds.
+
+ans = 
+
+    'Wnext'    [122]    [122]    [ 960]
+    'Sal'      [122]    [  1]    [ 109]
+    'v'        [122]    [  1]    [ 122]
+    'P'        [250]    [122]    [ 546]
+    'links'    [122]    [122]    [3318]
+    'Aves'     [122]    [  7]    [ 851]
+    'Varin'    [122]    [  1]    [ 121]
+
+
+s =
+
+     5
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [960]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [568]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 16.557762 seconds.
+Elapsed time is 16.573964 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [568]
+    'size Celements'    [1x2 double]    [ 48]
+    'size F'            [1x2 double]    [ 74]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 16.583506 seconds.
+Elapsed time is 16.600347 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [568]
+    'size P'            [1x2 double]    [180]
+    'size Celements'    [1x2 double]    [ 48]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 16.609285 seconds.
+Elapsed time is 16.629137 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [568]
+    'size P'            [1x2 double]    [193]
+    'size Celements'    [1x2 double]    [ 61]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 16.641785 seconds.
+Elapsed time is 16.731233 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [203]
+    'size P'          [1x2 double]    [193]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 16.738439 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [203]
+    'size P'          [1x2 double]    [193]
+
+Elapsed time is 16.780618 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 16.782929 seconds.
+Elapsed time is 16.791267 seconds.
+
+ans = 
+
+    'Wnext'    [ 61]    [61]    [203]
+    'Sal'      [ 61]    [ 1]    [ 43]
+    'v'        [ 61]    [ 1]    [ 61]
+    'P'        [122]    [61]    [193]
+    'links'    [ 61]    [61]    [947]
+    'Aves'     [ 61]    [ 7]    [424]
+    'Varin'    [ 61]    [ 1]    [ 60]
+
+
+s =
+
+     6
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [203]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [169]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 16.917620 seconds.
+Elapsed time is 16.937022 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [169]
+    'size Celements'    [1x2 double]    [ 17]
+    'size F'            [1x2 double]    [ 44]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 16.941903 seconds.
+Elapsed time is 16.950759 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [169]
+    'size P'            [1x2 double]    [ 50]
+    'size Celements'    [1x2 double]    [ 17]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 16.951001 seconds.
+Elapsed time is 16.964533 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [169]
+    'size P'            [1x2 double]    [ 68]
+    'size Celements'    [1x2 double]    [ 35]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 16.965483 seconds.
+Elapsed time is 17.063471 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [47]
+    'size P'          [1x2 double]    [68]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 17.073515 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [47]
+    'size P'          [1x2 double]    [68]
+
+Elapsed time is 17.102281 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 17.113552 seconds.
+Elapsed time is 17.123890 seconds.
+
+ans = 
+
+    'Wnext'    [35]    [35]    [ 47]
+    'Sal'      [35]    [ 1]    [  9]
+    'v'        [35]    [ 1]    [ 35]
+    'P'        [61]    [35]    [ 68]
+    'links'    [35]    [35]    [267]
+    'Aves'     [35]    [ 7]    [242]
+    'Varin'    [35]    [ 1]    [ 34]
+
+
+s =
+
+     7
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [47]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [47]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 17.155049 seconds.
+Elapsed time is 17.160923 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [47]
+    'size Celements'    [1x2 double]    [ 5]
+    'size F'            [1x2 double]    [30]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 17.161163 seconds.
+Elapsed time is 17.177604 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [47]
+    'size P'            [1x2 double]    [10]
+    'size Celements'    [1x2 double]    [ 5]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 17.177854 seconds.
+Elapsed time is 17.186374 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [47]
+    'size P'            [1x2 double]    [36]
+    'size Celements'    [1x2 double]    [31]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 17.186623 seconds.
+Elapsed time is 17.251123 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [33]
+    'size P'          [1x2 double]    [36]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 17.264206 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [33]
+    'size P'          [1x2 double]    [36]
+
+Elapsed time is 17.280950 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 17.287642 seconds.
+Elapsed time is 17.294761 seconds.
+
+ans = 
+
+    'Wnext'    [31]    [31]    [ 33]
+    'Sal'      [31]    [ 1]    [  2]
+    'v'        [31]    [ 1]    [ 31]
+    'P'        [35]    [31]    [ 36]
+    'links'    [31]    [31]    [197]
+    'Aves'     [31]    [ 7]    [214]
+    'Varin'    [31]    [ 1]    [ 30]
+
+
+s =
+
+     8
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [33]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [33]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 17.310344 seconds.
+Elapsed time is 17.319528 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [33]
+    'size Celements'    [1x2 double]    [ 1]
+    'size F'            [1x2 double]    [30]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 17.320364 seconds.
+Elapsed time is 17.327181 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [33]
+    'size P'            [1x2 double]    [ 2]
+    'size Celements'    [1x2 double]    [ 1]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 17.327449 seconds.
+Elapsed time is 17.334211 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [33]
+    'size P'            [1x2 double]    [31]
+    'size Celements'    [1x2 double]    [30]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 17.340471 seconds.
+Elapsed time is 17.398632 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [30]
+    'size P'          [1x2 double]    [31]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 17.404071 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [30]
+    'size P'          [1x2 double]    [31]
+
+Elapsed time is 17.418084 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 17.418892 seconds.
+Elapsed time is 17.425914 seconds.
+
+ans = 
+
+    'Wnext'    [30]    [30]    [ 30]
+    'Sal'      [30]    [ 1]    [  0]
+    'v'        [30]    [ 1]    [ 30]
+    'P'        [31]    [30]    [ 31]
+    'links'    [30]    [30]    [176]
+    'Aves'     [30]    [ 7]    [207]
+    'Varin'    [30]    [ 1]    [ 29]
+
+
+s =
+
+     9
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [30]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [30]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 17.449390 seconds.
+Elapsed time is 17.454863 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [30]
+    'size Celements'    [1x2 double]    [ 0]
+    'size F'            [1x2 double]    [30]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 17.455096 seconds.
+Elapsed time is 17.459384 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [30]
+    'size P'            [1x2 double]    [ 0]
+    'size Celements'    [1x2 double]    [ 0]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 17.459616 seconds.
+Elapsed time is 17.465176 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [30]
+    'size P'            [1x2 double]    [30]
+    'size Celements'    [1x2 double]    [30]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 17.465529 seconds.
+Elapsed time is 17.522500 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [30]
+    'size P'          [1x2 double]    [30]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 17.529115 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [30]
+    'size P'          [1x2 double]    [30]
+
+Elapsed time is 17.544071 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 17.547026 seconds.
+Elapsed time is 17.558866 seconds.
+
+ans = 
+
+    'Wnext'    [30]    [30]    [ 30]
+    'Sal'      [30]    [ 1]    [  0]
+    'v'        [30]    [ 1]    [ 30]
+    'P'        [30]    [30]    [ 30]
+    'links'    [30]    [30]    [176]
+    'Aves'     [30]    [ 7]    [207]
+    'Varin'    [30]    [ 1]    [ 29]
+
+Elapsed time is 17.576367 seconds.
+
+ans =
+
+starting Interpret3D
+
+Elapsed time is 17.585602 seconds.
+
+ans =
+
+inputs to interpret 3D
+
+
+ans =
+
+        5403           1        5241
+
+
+ans =
+
+     1    10
+
+
+ans =
+
+     1    10    10
+
+
+ans =
+
+FMC finished!
+
+Elapsed time is 17.987714 seconds.
+{Warning: "sparsesubaccess" not found in path.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\rmpath.m',58,1)">rmpath at 58</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',113,1)">main_FMC at 113</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
+{Warning: "FMSC code" not found in path.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\rmpath.m',58,1)">rmpath at 58</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',64,1)">FMSC_run_script at 64</a>} 
+{Warning: Name is nonexistent or not a directory: FMSC code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',68,1)">FMSC_run_script at 68</a>} 
+{Warning: Name is nonexistent or not a directory: MB visual code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m',3,1)">main_interpret at 3</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',69,1)">FMSC_run_script at 69</a>} 
+
+Wkspcname =
+
+results from FMSC\aluminum_grains\workspace_x6.5t47_y0.5t18_z5t5.mat
+
+{Error using <a href="matlab:helpUtils.errorDocCallback('rmdir')" style="font-weight:bold">rmdir</a>
+C:\Users\Andrew\Desktop\Research\3DEBSDrepos\Data\Output Files is not a
+directory.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_interpret', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m', 26)" style="font-weight:bold">main_interpret</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m',26,0)">line 26</a>)
+rmdir('Output Files','s');
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 69)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',69,0)">line 69</a>)
+main_interpret
+} 
+{Warning: Name is nonexistent or not a directory: FMSC code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>} 
+{Warning: Name is nonexistent or not a directory: MB visual code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m',3,1)">main_interpret at 3</a>} 
+
+Wkspcname =
+
+results from FMSC\aluminum_grains\workspace_x6.5t47_y0.5t18_z5t5.mat
+
+{Error using <a href="matlab:helpUtils.errorDocCallback('rmdir')" style="font-weight:bold">rmdir</a>
+C:\Users\Andrew\Desktop\Research\3DEBSDrepos\Data\Output Files is not a
+directory.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_interpret', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m', 26)" style="font-weight:bold">main_interpret</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m',26,0)">line 26</a>)
+rmdir('Output Files','s');
+} 
+FMSC_run_script
+{Warning: Name is nonexistent or not a directory: NNLT code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',57,1)">FMSC_run_script at 57</a>} 
+{Warning: Name is nonexistent or not a directory: NNLT code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\NNLT code\NNLT.m',35,1)">NNLT at 35</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',58,1)">FMSC_run_script at 58</a>} 
+
+ans =
+
+beginning slice:5...
+
+{Error using <a href="matlab:helpUtils.errorDocCallback('importdata', 'C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\importdata.m', 137)" style="font-weight:bold">importdata</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\importdata.m',137,0)">line 137</a>)
+Unable to open file.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('NNLT', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\NNLT code\NNLT.m', 108)" style="font-weight:bold">NNLT</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\NNLT code\NNLT.m',108,0)">line 108</a>)
+            transfM = importdata(dataPath);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 58)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',58,0)">line 58</a>)
+NNLT(dataSetName,xRange,yRange,slicerange,sliceSpacing,radius)
+} 
+FMSC_run_script
+{Warning: Directory already exists.} 
+{> In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\NNLT code\NNLT.m',61,1)">NNLT at 61</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',58,1)">FMSC_run_script at 58</a>} 
+
+ans =
+
+beginning slice:5...
+
+
+ans =
+
+finding nearest neighbor...
+
+
+ans =
+
+beginning concatenation...
+
+
+ans =
+
+FINISHED!
+
+{Warning: Directory already exists.} 
+{> In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',42,1)">main_FMC at 42</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
+
+ans =
+
+aluminum_grains\x6.5t47_y0.5t18_z5t5
+
+
+ans =
+
+cmaha0:     0.05
+cmaha:        10
+quatmax:      5
+gammaW:       25
+
+
+
+ans =
+
+starting setup 3D
+
+Elapsed time is 0.000009 seconds.
+Elapsed time is 5.074742 seconds.
+
+ans = 
+
+    'Wnext'    [2952]    [2952]    [22912]
+    'Aves'     [2952]    [   7]    [20658]
+
+
+ans =
+
+starting RunFMC
+
+Elapsed time is 5.078146 seconds.
+
+ans =
+
+links
+
+Elapsed time is 5.079379 seconds.
+Elapsed time is 5.080554 seconds.
+
+s =
+
+     1
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [22912]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [22912]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 5.310197 seconds.
+
+ans =
+
+beginning sorting by weights
+
+Elapsed time is 6.088951 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size Celements'    [1x2 double]    [ 1302]
+    'size F'            [1x2 double]    [ 1650]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 6.089684 seconds.
+Elapsed time is 6.115291 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size P'            [1x2 double]    [ 8084]
+    'size Celements'    [1x2 double]    [ 1302]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 6.116617 seconds.
+Elapsed time is 6.149962 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [22912]
+    'size P'            [1x2 double]    [ 8084]
+    'size Celements'    [1x2 double]    [ 1302]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 6.151649 seconds.
+Elapsed time is 7.806093 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [24302]
+    'size P'          [1x2 double]    [ 7562]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 7.806881 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [18690]
+    'size P'          [1x2 double]    [ 7562]
+
+Elapsed time is 10.506645 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 10.507163 seconds.
+Elapsed time is 10.564475 seconds.
+
+ans = 
+
+    'Wnext'    [1302]    [1302]    [18690]
+    'Sal'      [1302]    [   1]    [ 1299]
+    'v'        [1302]    [   1]    [ 1302]
+    'P'        [2952]    [1302]    [ 7562]
+    'links'    [1302]    [1302]    [24302]
+    'Aves'     [1302]    [   7]    [ 9111]
+    'Varin'    [1302]    [   1]    [ 1301]
+
+
+s =
+
+     2
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [18690]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [6352]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 10.878637 seconds.
+Elapsed time is 10.998331 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [6352]
+    'size Celements'    [1x2 double]    [ 685]
+    'size F'            [1x2 double]    [ 617]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 10.998794 seconds.
+Elapsed time is 11.014689 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [6352]
+    'size P'            [1x2 double]    [2327]
+    'size Celements'    [1x2 double]    [ 685]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 11.014949 seconds.
+Elapsed time is 11.030331 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [6352]
+    'size P'            [1x2 double]    [2330]
+    'size Celements'    [1x2 double]    [ 688]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 11.030890 seconds.
+Elapsed time is 11.332130 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [4720]
+    'size P'          [1x2 double]    [2330]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 11.332995 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [4712]
+    'size P'          [1x2 double]    [2330]
+
+Elapsed time is 11.871526 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 11.871985 seconds.
+Elapsed time is 11.902620 seconds.
+
+ans = 
+
+    'Wnext'    [ 688]    [688]    [ 4712]
+    'Sal'      [ 688]    [  1]    [  668]
+    'v'        [ 688]    [  1]    [  688]
+    'P'        [1302]    [688]    [ 2330]
+    'links'    [ 688]    [688]    [14786]
+    'Aves'     [ 688]    [  7]    [ 4813]
+    'Varin'    [ 688]    [  1]    [  687]
+
+
+s =
+
+     3
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [4712]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [2269]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 11.987893 seconds.
+Elapsed time is 12.030860 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [2269]
+    'size Celements'    [1x2 double]    [ 353]
+    'size F'            [1x2 double]    [ 335]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 12.047506 seconds.
+Elapsed time is 12.059222 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [2269]
+    'size P'            [1x2 double]    [ 958]
+    'size Celements'    [1x2 double]    [ 353]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 12.059594 seconds.
+Elapsed time is 12.070015 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [2269]
+    'size P'            [1x2 double]    [ 977]
+    'size Celements'    [1x2 double]    [ 372]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 12.070308 seconds.
+Elapsed time is 12.228726 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [1386]
+    'size P'          [1x2 double]    [ 977]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 12.229528 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [1384]
+    'size P'          [1x2 double]    [ 977]
+
+Elapsed time is 12.392512 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 12.392948 seconds.
+Elapsed time is 12.413180 seconds.
+
+ans = 
+
+    'Wnext'    [372]    [372]    [1384]
+    'Sal'      [372]    [  1]    [ 326]
+    'v'        [372]    [  1]    [ 372]
+    'P'        [688]    [372]    [ 977]
+    'links'    [372]    [372]    [7262]
+    'Aves'     [372]    [  7]    [2601]
+    'Varin'    [372]    [  1]    [ 371]
+
+
+s =
+
+     4
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [1384]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [950]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 12.452094 seconds.
+Elapsed time is 12.474054 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [950]
+    'size Celements'    [1x2 double]    [165]
+    'size F'            [1x2 double]    [207]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 12.474320 seconds.
+Elapsed time is 12.483383 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [950]
+    'size P'            [1x2 double]    [406]
+    'size Celements'    [1x2 double]    [165]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 12.483624 seconds.
+Elapsed time is 12.492411 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [950]
+    'size P'            [1x2 double]    [450]
+    'size Celements'    [1x2 double]    [209]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 12.492697 seconds.
+Elapsed time is 12.622761 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [481]
+    'size P'          [1x2 double]    [450]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 12.623609 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [481]
+    'size P'          [1x2 double]    [450]
+
+Elapsed time is 12.689903 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 12.690267 seconds.
+Elapsed time is 12.706079 seconds.
+
+ans = 
+
+    'Wnext'    [209]    [209]    [ 481]
+    'Sal'      [209]    [  1]    [ 127]
+    'v'        [209]    [  1]    [ 209]
+    'P'        [372]    [209]    [ 450]
+    'links'    [209]    [209]    [2967]
+    'Aves'     [209]    [  7]    [1460]
+    'Varin'    [209]    [  1]    [ 208]
+
+
+s =
+
+     5
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [481]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [401]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 12.734224 seconds.
+Elapsed time is 12.753123 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [401]
+    'size Celements'    [1x2 double]    [ 66]
+    'size F'            [1x2 double]    [143]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 12.753585 seconds.
+Elapsed time is 12.762049 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [401]
+    'size P'            [1x2 double]    [149]
+    'size Celements'    [1x2 double]    [ 66]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 12.762303 seconds.
+Elapsed time is 12.770907 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [401]
+    'size P'            [1x2 double]    [230]
+    'size Celements'    [1x2 double]    [147]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 12.771205 seconds.
+Elapsed time is 12.843108 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [247]
+    'size P'          [1x2 double]    [230]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 12.844187 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [245]
+    'size P'          [1x2 double]    [230]
+
+Elapsed time is 12.883020 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 12.883387 seconds.
+Elapsed time is 12.895354 seconds.
+
+ans = 
+
+    'Wnext'    [147]    [147]    [ 245]
+    'Sal'      [147]    [  1]    [  39]
+    'v'        [147]    [  1]    [ 147]
+    'P'        [209]    [147]    [ 230]
+    'links'    [147]    [147]    [1605]
+    'Aves'     [147]    [  7]    [1026]
+    'Varin'    [147]    [  1]    [ 146]
+
+
+s =
+
+     6
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [245]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [211]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 12.913418 seconds.
+Elapsed time is 12.924626 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [211]
+    'size Celements'    [1x2 double]    [ 18]
+    'size F'            [1x2 double]    [129]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 12.925007 seconds.
+Elapsed time is 12.930935 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [211]
+    'size P'            [1x2 double]    [ 47]
+    'size Celements'    [1x2 double]    [ 18]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 12.931164 seconds.
+Elapsed time is 12.940854 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [211]
+    'size P'            [1x2 double]    [153]
+    'size Celements'    [1x2 double]    [124]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 12.941152 seconds.
+Elapsed time is 13.004425 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [144]
+    'size P'          [1x2 double]    [153]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 13.005239 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [144]
+    'size P'          [1x2 double]    [153]
+
+Elapsed time is 13.032019 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 13.032405 seconds.
+Elapsed time is 13.042856 seconds.
+
+ans = 
+
+    'Wnext'    [124]    [124]    [ 144]
+    'Sal'      [124]    [  1]    [   8]
+    'v'        [124]    [  1]    [ 124]
+    'P'        [147]    [124]    [ 153]
+    'links'    [124]    [124]    [1184]
+    'Aves'     [124]    [  7]    [ 865]
+    'Varin'    [124]    [  1]    [ 123]
+
+
+s =
+
+     7
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [144]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [139]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 13.059110 seconds.
+Elapsed time is 13.068619 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [139]
+    'size Celements'    [1x2 double]    [  3]
+    'size F'            [1x2 double]    [121]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 13.076259 seconds.
+Elapsed time is 13.082089 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [139]
+    'size P'            [1x2 double]    [  8]
+    'size Celements'    [1x2 double]    [  3]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 13.082308 seconds.
+Elapsed time is 13.088703 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [139]
+    'size P'            [1x2 double]    [124]
+    'size Celements'    [1x2 double]    [119]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 13.088992 seconds.
+Elapsed time is 13.147590 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [123]
+    'size P'          [1x2 double]    [124]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 13.148386 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [123]
+    'size P'          [1x2 double]    [124]
+
+Elapsed time is 13.172831 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 13.173180 seconds.
+Elapsed time is 13.183911 seconds.
+
+ans = 
+
+    'Wnext'    [119]    [119]    [ 123]
+    'Sal'      [119]    [  1]    [   0]
+    'v'        [119]    [  1]    [ 119]
+    'P'        [124]    [119]    [ 124]
+    'links'    [119]    [119]    [1025]
+    'Aves'     [119]    [  7]    [ 830]
+    'Varin'    [119]    [  1]    [ 118]
+
+
+s =
+
+     8
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [123]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [123]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 13.199418 seconds.
+Elapsed time is 13.211159 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [123]
+    'size Celements'    [1x2 double]    [  0]
+    'size F'            [1x2 double]    [119]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 13.215108 seconds.
+Elapsed time is 13.225211 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [123]
+    'size P'            [1x2 double]    [  0]
+    'size Celements'    [1x2 double]    [  0]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 13.225500 seconds.
+Elapsed time is 13.232751 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [123]
+    'size P'            [1x2 double]    [119]
+    'size Celements'    [1x2 double]    [119]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 13.233051 seconds.
+Elapsed time is 13.288790 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [123]
+    'size P'          [1x2 double]    [119]
+
+
+ans =
+
+coarsen7
+
+Elapsed time is 13.289583 seconds.
+
+ans = 
+
+    'size Wcoarse'    [1x2 double]    [123]
+    'size P'          [1x2 double]    [119]
+
+Elapsed time is 13.313270 seconds.
+
+ans =
+
+coarsen 8
+
+Elapsed time is 13.313621 seconds.
+Elapsed time is 13.325107 seconds.
+
+ans = 
+
+    'Wnext'    [119]    [119]    [ 123]
+    'Sal'      [119]    [  1]    [   0]
+    'v'        [119]    [  1]    [ 119]
+    'P'        [119]    [119]    [ 119]
+    'links'    [119]    [119]    [1025]
+    'Aves'     [119]    [  7]    [ 830]
+    'Varin'    [119]    [  1]    [ 118]
+
+Elapsed time is 13.333406 seconds.
+
+ans =
+
+starting Interpret3D
+
+Elapsed time is 13.333532 seconds.
+
+ans =
+
+inputs to interpret 3D
+
+
+ans =
+
+        6032           1        5419
+
+
+ans =
+
+     1     9
+
+
+ans =
+
+     1     9     9
+
+
+ans =
+
+FMC finished!
+
+Elapsed time is 13.704266 seconds.
+{Warning: "sparsesubaccess" not found in path.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\rmpath.m',58,1)">rmpath at 58</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',113,1)">main_FMC at 113</a>} 
+{Warning: "FMSC code" not found in path.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\rmpath.m',58,1)">rmpath at 58</a>} 
+{Warning: Name is nonexistent or not a directory: FMSC code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>} 
+{Warning: Name is nonexistent or not a directory: MB visual code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_interpret.m',3,1)">main_interpret at 3</a>} 
+
+Wkspcname =
+
+results from FMSC\aluminum_grains\workspace_x6.5t47_y0.5t18_z5t5.mat
+
+
+curS =
+
+     4
+
+Elapsed time is 45.564006 seconds.
+
+curS =
+
+     5
+
+Elapsed time is 45.688913 seconds.
+
+curS =
+
+     6
+
+Elapsed time is 45.765934 seconds.
+
+curS =
+
+     7
+
+Elapsed time is 45.824802 seconds.
+
+curS =
+
+     8
+
+Elapsed time is 45.878138 seconds.
+
+curS =
+
+     9
+
+Elapsed time is 45.930153 seconds.
+
+ans =
+
+Breaking non-continuous clusters
+
+Elapsed time is 46.181872 seconds.

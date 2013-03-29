@@ -1,0 +1,371 @@
+
+ans =
+
+aluminum_tensile\x1t35_y2t20_z49t49
+
+
+ans =
+
+cmaha0:     0.05
+cmaha:        4
+quatmax:      5
+gammaW:       25
+
+
+
+ans =
+
+starting setup 3D
+
+Elapsed time is 0.000003 seconds.
+Elapsed time is 14.806616 seconds.
+
+ans = 
+
+    'Wnext'    [61721]    [61721]    [490640]
+    'Aves'     [61721]    [    7]    [432047]
+
+
+ans =
+
+starting RunFMC
+
+Elapsed time is 14.825318 seconds.
+
+ans =
+
+links
+
+Elapsed time is 14.835266 seconds.
+Elapsed time is 14.869868 seconds.
+
+s =
+
+     1
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [490640]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [490640]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 19.128805 seconds.
+
+ans =
+
+beginning sorting by weights
+
+Elapsed time is 398.216633 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size Celements'    [1x2 double]    [ 28346]
+    'size F'            [1x2 double]    [ 33375]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 398.217598 seconds.
+Elapsed time is 401.052677 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size P'            [1x2 double]    [174717]
+    'size Celements'    [1x2 double]    [ 28346]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 401.056354 seconds.
+Elapsed time is 412.499865 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size P'            [1x2 double]    [174717]
+    'size Celements'    [1x2 double]    [ 28346]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 412.500322 seconds.
+{Undefined function 'setsparse' for input arguments of type 'double'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('coarsen6_fast', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\coarsen6_fast.m', 63)" style="font-weight:bold">coarsen6_fast</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\coarsen6_fast.m',63,0)">line 63</a>)
+P = setsparse(P,newRows,newCols,zeros(length(newRows),1));
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Coarseninteresting_fast', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\Coarseninteresting_fast.m', 79)" style="font-weight:bold">Coarseninteresting_fast</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\Coarseninteresting_fast.m',79,0)">line 79</a>)
+coarsen6_fast;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('RunFMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\RunFMC.m', 60)" style="font-weight:bold">RunFMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\RunFMC.m',60,0)">line 60</a>)
+     Coarseninteresting_fast;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 76)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',76,0)">line 76</a>)
+RunFMC;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+helpUtils.errorDocCallback('coarsen6_fast', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\coarsen6_fast.m', 63)
+FMSC_run_script
+{Warning: Name is nonexistent or not a directory: FMSC code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',62,1)">FMSC_run_script at 62</a>} 
+{Warning: Name is nonexistent or not a directory: sparsesubaccess.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',7,1)">main_FMC at 7</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
+{Warning: Directory already exists.} 
+{> In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',42,1)">main_FMC at 42</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
+
+ans =
+
+aluminum_tensile\x1t35_y2t20_z49t49
+
+
+ans =
+
+cmaha0:     0.05
+cmaha:        4
+quatmax:      5
+gammaW:       25
+
+
+
+ans =
+
+starting setup 3D
+
+Elapsed time is 0.000003 seconds.
+Elapsed time is 113.816156 seconds.
+
+ans = 
+
+    'Wnext'    [61721]    [61721]    [490640]
+    'Aves'     [61721]    [    7]    [432047]
+
+
+ans =
+
+starting RunFMC
+
+Elapsed time is 113.836400 seconds.
+
+ans =
+
+links
+
+Elapsed time is 113.846974 seconds.
+Elapsed time is 113.881859 seconds.
+
+s =
+
+     1
+
+
+ans =
+
+coarseninteresting
+
+
+ans =
+
+coarsen W
+
+
+ans = 
+
+    'size W'    [1x2 double]    [490640]
+
+
+ans = 
+
+    'size W'    [1x2 double]    [490640]
+
+
+ans =
+
+coarsen 1
+
+Elapsed time is 118.182907 seconds.
+
+ans =
+
+beginning sorting by weights
+
+Elapsed time is 497.207312 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size Celements'    [1x2 double]    [ 28022]
+    'size F'            [1x2 double]    [ 33699]
+
+
+ans =
+
+coarsen 2
+
+Elapsed time is 497.208032 seconds.
+Elapsed time is 500.024255 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size P'            [1x2 double]    [174508]
+    'size Celements'    [1x2 double]    [ 28022]
+
+
+ans =
+
+coarsen3
+
+Elapsed time is 500.024742 seconds.
+Elapsed time is 511.112549 seconds.
+
+ans = 
+
+    'size W'            [1x2 double]    [490640]
+    'size P'            [1x2 double]    [174508]
+    'size Celements'    [1x2 double]    [ 28022]
+
+
+ans =
+
+coarsen 6
+
+Elapsed time is 511.113230 seconds.
+{Undefined function 'setsparse' for input arguments of type 'double'.
+
+Error in <a href="matlab:helpUtils.errorDocCallback('coarsen6_fast', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\coarsen6_fast.m', 63)" style="font-weight:bold">coarsen6_fast</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\coarsen6_fast.m',63,0)">line 63</a>)
+P = setsparse(P,newRows,newCols,zeros(length(newRows),1));
+
+Error in <a href="matlab:helpUtils.errorDocCallback('Coarseninteresting_fast', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\Coarseninteresting_fast.m', 79)" style="font-weight:bold">Coarseninteresting_fast</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\Coarseninteresting_fast.m',79,0)">line 79</a>)
+coarsen6_fast;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('RunFMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\RunFMC.m', 60)" style="font-weight:bold">RunFMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\RunFMC.m',60,0)">line 60</a>)
+     Coarseninteresting_fast;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 76)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',76,0)">line 76</a>)
+RunFMC;
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+pwd
+
+ans =
+
+C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\sparsesubaccess
+
+FMSC_run_script
+{Warning: Name is nonexistent or not a directory: FMSC code.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',62,1)">FMSC_run_script at 62</a>} 
+{Warning: Name is nonexistent or not a directory: sparsesubaccess.} 
+{> In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\path.m',110,1)">path at 110</a>
+  In <a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\general\addpath.m',87,1)">addpath at 87</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',7,1)">main_FMC at 7</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
+{Error using <a href="matlab:helpUtils.errorDocCallback('dlmread', 'C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m', 62)" style="font-weight:bold">dlmread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m',62,0)">line 62</a>)
+The file 'data for FMSC\aluminum_tensile\x1t35_y2t20_z49t49.txt' could not
+be opened because: No such file or directory
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 37)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',37,0)">line 37</a>)
+data = dlmread(dataPath);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+FMSC_run_script
+{Error using <a href="matlab:helpUtils.errorDocCallback('dlmread', 'C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m', 62)" style="font-weight:bold">dlmread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m',62,0)">line 62</a>)
+The file 'data for FMSC\aluminum_tensile\x1t35_y2t20_z49t49.txt' could not
+be opened because: No such file or directory
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 37)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',37,0)">line 37</a>)
+data = dlmread(dataPath);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+FMSC_run_script
+{Error using <a href="matlab:helpUtils.errorDocCallback('dlmread', 'C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m', 62)" style="font-weight:bold">dlmread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m',62,0)">line 62</a>)
+The file 'data for FMSC\aluminum_tensile\x1t35_y2t20_z49t49.txt' could not
+be opened because: No such file or directory
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 37)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',37,0)">line 37</a>)
+data = dlmread(dataPath);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+clear all
+FMSC_run_script
+{Error using <a href="matlab:helpUtils.errorDocCallback('dlmread', 'C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m', 62)" style="font-weight:bold">dlmread</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2012a\toolbox\matlab\iofun\dlmread.m',62,0)">line 62</a>)
+The file 'data for FMSC\aluminum_tensile\x1t35_y2t20_z49t49.txt' could not
+be opened because: No such file or directory
+
+Error in <a href="matlab:helpUtils.errorDocCallback('main_FMC', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m', 37)" style="font-weight:bold">main_FMC</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',37,0)">line 37</a>)
+data = dlmread(dataPath);
+
+Error in <a href="matlab:helpUtils.errorDocCallback('FMSC_run_script', 'C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m', 63)" style="font-weight:bold">FMSC_run_script</a> (<a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,0)">line 63</a>)
+main_FMC
+} 
+FMSC_run_script
+{Warning: Directory already exists.} 
+{> In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\NNLT code\NNLT.m',61,1)">NNLT at 61</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',58,1)">FMSC_run_script at 58</a>} 
+
+ans =
+
+beginning slice:49...
+
+
+ans =
+
+finding nearest neighbor...
+
+
+ans =
+
+beginning concatenation...
+
+
+ans =
+
+FINISHED!
+
+{Warning: Directory already exists.} 
+{> In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC code\main_FMC.m',42,1)">main_FMC at 42</a>
+  In <a href="matlab: opentoline('C:\Users\Andrew\Desktop\Research\3DEBSDrepos\FMSC Boundaries\FMSC_run_script.m',63,1)">FMSC_run_script at 63</a>} 
